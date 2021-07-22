@@ -1,0 +1,19 @@
+.corNav{
+    background-color: rgb(26, 107, 26);
+    color: white;
+}
+.logo{
+    border-radius: 50%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(33, 37, 41);
+    color: white;
+    text-align: center;
+}
+.btsair{
+    color: rgb(175, 175, 20);
+}

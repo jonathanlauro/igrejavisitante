@@ -1,0 +1,48 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img class="logo" width="50" height="50" src="https://yt3.ggpht.com/Dm1qJi4wR1K1QK6_v49uXjkcKzwhRqEFRYJ0_AegP3a56zWm-Z-F7e1nLFj1No-zJqhiunyZhKA=s88-c-k-c0x00ffffff-no-rj" alt="idef"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]= "['/visitante']">Visitante</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Enviar mensagens
+                  </a>
+                  <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" [routerLink]= "['/agradecimento']">Agradecimento</a></li>
+                    <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Ausencia</a></li>
+                    <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Lembrete</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Ausencia Personalizada</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link enebled" [routerLink]= "['/usuario']" tabindex="-1" aria-disabled="true">Usuários</a> 
+                </li>
+              </ul>
+              <div class="d-flex">
+                  <button mat-button class="btsair" matTooltip="Sair do app" color="accent"type="button" [routerLink]= "['/login']" (click)="logout()"><mat-icon>exit_to_app</mat-icon></button>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+</header>
+<section>
+    <main class="container">
+        <router-outlet></router-outlet>
+    </main>
+</section>
+
+<footer class="footer">
+    <p>jonathanlauro.dev@gmail.com</p>
+</footer>
