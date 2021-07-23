@@ -4,6 +4,7 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { AgradecimentoComponent } from './agradecimento/agradecimento.component';
+import { AusenciaComponent } from './ausencia/ausencia.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomeComponent } from './layout/home/home.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
       {path: '', component: BemVindoComponent},
       { path: 'usuario',component: UsuarioComponent},
       { path: 'visitante',component: VisitanteComponent},
-      { path: 'agradecimento',component: AgradecimentoComponent}
+      { path: 'agradecimento',component: AgradecimentoComponent},
+      { path: 'ausencia',component: AusenciaComponent}
     ],
     canActivate:[AuthGuard]
   },

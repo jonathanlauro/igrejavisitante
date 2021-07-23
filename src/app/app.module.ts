@@ -20,6 +20,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { VisitanteComponent } from './visitante/visitante.component';
 import { AgradecimentoComponent } from './agradecimento/agradecimento.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CadastroComponent } from './usuario/cadastro/cadastro.component';
+import { CadastroVisitanteComponent } from './visitante/cadastro-visitante/cadastro-visitante.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AusenciaComponent } from './ausencia/ausencia.component';
 
 
 @NgModule({
@@ -32,7 +39,10 @@ import { AgradecimentoComponent } from './agradecimento/agradecimento.component'
     BemVindoComponent,
     UsuarioComponent,
     VisitanteComponent,
-    AgradecimentoComponent
+    AgradecimentoComponent,
+    CadastroComponent,
+    CadastroVisitanteComponent,
+    AusenciaComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +55,11 @@ import { AgradecimentoComponent } from './agradecimento/agradecimento.component'
     MatInputModule,
     MatToolbarModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTableModule,
+    MatDialogModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

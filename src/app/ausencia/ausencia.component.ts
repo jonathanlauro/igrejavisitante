@@ -1,34 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AgradecimentoService } from './agradecimento.service';
+import { AusenciaService } from './ausencia.service';
+
 
 @Component({
-  selector: 'app-agradecimento',
-  templateUrl: './agradecimento.component.html',
-  styleUrls: ['./agradecimento.component.css']
+  selector: 'app-ausencia',
+  templateUrl: './ausencia.component.html',
+  styleUrls: ['./ausencia.component.css']
 })
-export class AgradecimentoComponent implements OnInit {
+export class AusenciaComponent implements OnInit {
   data:''='';
   token:any;
 
   constructor(
-    private agradecimentoService:AgradecimentoService,
     private _snackBar: MatSnackBar,
+    private ausenciaService:AusenciaService
   ) { }
 
   ngOnInit(): void {
     this.token = window.localStorage.getItem('token');
   }
 
-  enviarMsg(){
+
+  enviarMsgAusencia(){
     if(this.data == undefined || this.data == ''){
       this.openSnackBar("Preencha o campo data por favor!","",true);
       return;
     }
-    this.agradecimentoService.sendMessage(this.token,this.data).subscribe(()=>{
+    this.ausenciaService.sendMessageAusencia(this.token,this.data).subscribe(()=>{
       this.openSnackBar("Menssagens enviada!","",false);
     })
   }
+
+
+
 
 
   openSnackBar(message: string, action: string, isError:boolean) { 

@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+}
+.linha-clicavel{
+    color:rgb(228, 178, 40);
+    font-size: 40px;
+}
+.linha-clicavel:hover{
+    color:rgb(155, 194, 48);
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from '../shared/account.service';
 import { Usuario } from './Usuario';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private accountService:AccountService,
-    private router: Router
+    private router: Router,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -27,11 +29,16 @@ export class LoginComponent implements OnInit {
     try{
       const result:any = await this.accountService.login(this.usuario);
       console.log(`Login efetuado: ${result.token}`);
-
+      this.openSnackBar("Bem-Vindo","",true)
       //navego para a rota vazia novamente
       this.router.navigate(['']);
     }catch(error){
+      this.openSnackBar("Usuario ou senha Inválidos","X",true)
       console.log(error);
     }
+  }
+
+  openSnackBar(message: string, action: string, isError:boolean) { 
+    this._snackBar.open(message, action,{duration: 2000,panelClass: [isError ? 'snackbar-error' : 'snackbar-success']});
   }
 }

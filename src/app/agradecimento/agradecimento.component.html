@@ -1,1 +1,9 @@
-<p>agradecimento works!</p>
+<mat-card class="mt-4">
+    <h1>Enviar uma mensagem de agradecimento para os visitantes.</h1>
+    <hr>
+    <mat-form-field appearance="fill">
+        <mat-label>Data do culto</mat-label>
+        <input [(ngModel)]="data" matInput >
+    </mat-form-field>
+    <button (click)="enviarMsg()" mat-raised-button color="primary">Enviar</button>
+</mat-card>
