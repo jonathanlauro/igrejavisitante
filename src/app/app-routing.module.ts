@@ -8,6 +8,7 @@ import { AusenciaComponent } from './ausencia/ausencia.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomeComponent } from './layout/home/home.component';
+import { LembreteComponent } from './lembrete/lembrete.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { VisitanteComponent } from './visitante/visitante.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
       { path: 'usuario',component: UsuarioComponent},
       { path: 'visitante',component: VisitanteComponent},
       { path: 'agradecimento',component: AgradecimentoComponent},
-      { path: 'ausencia',component: AusenciaComponent}
+      { path: 'ausencia',component: AusenciaComponent},
+      { path: 'lembrete',component: LembreteComponent}
     ],
     canActivate:[AuthGuard]
   },

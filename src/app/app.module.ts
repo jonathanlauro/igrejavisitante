@@ -27,6 +27,7 @@ import { CadastroComponent } from './usuario/cadastro/cadastro.component';
 import { CadastroVisitanteComponent } from './visitante/cadastro-visitante/cadastro-visitante.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AusenciaComponent } from './ausencia/ausencia.component';
+import { LembreteComponent } from './lembrete/lembrete.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AusenciaComponent } from './ausencia/ausencia.component';
     AgradecimentoComponent,
     CadastroComponent,
     CadastroVisitanteComponent,
-    AusenciaComponent
+    AusenciaComponent,
+    LembreteComponent
   ],
   imports: [
     BrowserModule,

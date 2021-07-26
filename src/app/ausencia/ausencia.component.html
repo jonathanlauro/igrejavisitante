@@ -1,9 +1,9 @@
 <mat-card>
-    <h1>Enviar uma mensagem de ausencia para os visitantes.</h1>
+    <h1>Enviar uma mensagem de ausência para os visitantes.</h1>
     <hr>
     <mat-form-field appearance="fill">
         <mat-label>Data do culto</mat-label>
         <input [(ngModel)]="data" matInput >
     </mat-form-field>
-    <button (click)="enviarMsgAusencia()" mat-raised-button color="primary">Enviar</button>
+    <button (click)="enviarMsgAusencia()" matTooltip="enviar mensagens" mat-raised-button color="primary">Enviar</button>
 </mat-card>

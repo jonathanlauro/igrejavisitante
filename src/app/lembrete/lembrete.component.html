@@ -1,0 +1,7 @@
+<mat-card class="mt-5">
+    <h1>Enviar uma mensagem de Lembrete.</h1>
+    <hr>
+    <h3>Olá -Pessoa- tudo bem ? ...</h3>
+    <textarea [(ngModel)]="msg" class="form-control" style="resize: none;" placeholder="Dê continuidade ao lembrete..."></textarea><br>
+    <button (click)="onSubmit()" matTooltip="enviar mensagens" mat-raised-button color="primary">Enviar</button>
+</mat-card>
