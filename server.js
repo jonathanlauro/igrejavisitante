@@ -3,12 +3,12 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist/visitantes-registos'));
+app.use(express.static(__dirname + '/dist/visitantes-registros'));
 
 app.get('/*', function(req,res) {
 
 
-    res.sendFile(path.join(__dirname+'/dist/visitantes-registos/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/visitantes-registros/index.html'));
   });
   
   // Start the app by listening on the default Heroku port
