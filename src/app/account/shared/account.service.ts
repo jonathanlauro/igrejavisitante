@@ -18,7 +18,7 @@ export class AccountService {
   }
 
   async login(user: Usuario){
-  const result:any = await this.http.post('http://localhost:8080/login',user).toPromise();
+  const result:any = await this.http.post(`${environment.api}/login`,user).toPromise();
     console.log(result)
     if(result){
       window.localStorage.setItem('token',result.token);
