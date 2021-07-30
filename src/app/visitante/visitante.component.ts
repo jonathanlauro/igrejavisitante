@@ -14,6 +14,7 @@ export class VisitanteComponent implements OnInit {
 
   listaVisitantes:any=[];
   colunas:String[] = ['id','nome','telefone','email','dataVisita']
+  colunas2:String[] = ['id','nome','telefone','dataVisita']
   token:any;
 
   constructor(

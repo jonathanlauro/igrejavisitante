@@ -8,3 +8,15 @@ table {
 .linha-clicavel:hover{
     color:rgb(155, 194, 48);
 }
+.some-tabela-mobile{
+    visibility: collapse;
+}
+
+@media screen and (max-width: 768px){
+    .some-tabela-desktop{
+        display: none;
+    }
+    .some-tabela-mobile{
+        visibility: inherit;
+    }
+}
