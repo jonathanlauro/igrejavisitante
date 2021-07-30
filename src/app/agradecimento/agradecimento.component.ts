@@ -25,11 +25,20 @@ export class AgradecimentoComponent implements OnInit {
       this.openSnackBar("Preencha o campo data por favor!","",true);
       return;
     }
-    this.agradecimentoService.sendMessage(this.token,this.data).subscribe(()=>{
+    this.agradecimentoService.sendMessage(this.token,this.dataToString(this.data)).subscribe(()=>{
       this.openSnackBar("Menssagens enviada!","",false);
     })
   }
 
+  dataToString(data:Date){
+    let dta = data.toISOString().split('T')
+    let dt = dta[0]
+    let dataSt = dt.split('-')
+
+    let dataParaString = `${dataSt[2]}-${dataSt[1]}-${dataSt[0]}`;
+    return dataParaString;
+    
+  }
 
   openSnackBar(message: string, action: string, isError:boolean) { 
     this._snackBar.open(message, action,{duration: 2000,panelClass: [isError ? 'snackbar-error' : 'snackbar-success']});

@@ -28,6 +28,8 @@ import { CadastroVisitanteComponent } from './visitante/cadastro-visitante/cadas
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AusenciaComponent } from './ausencia/ausencia.component';
 import { LembreteComponent } from './lembrete/lembrete.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
 
 
 @NgModule({
@@ -61,7 +63,9 @@ import { LembreteComponent } from './lembrete/lembrete.component';
     MatSnackBarModule,
     MatTableModule,
     MatDialogModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

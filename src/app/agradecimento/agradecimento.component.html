@@ -3,7 +3,10 @@
     <hr>
     <mat-form-field appearance="fill">
         <mat-label>Data do culto</mat-label>
-        <input [(ngModel)]="data" matInput >
-    </mat-form-field>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="data">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    <br>
     <button (click)="enviarMsg()" mat-raised-button color="primary">Enviar</button>
 </mat-card>
