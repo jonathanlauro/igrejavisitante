@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { UsuarioService } from './usuario.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Router} from "@angular/router"
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-usuario',
@@ -16,6 +18,10 @@ export class UsuarioComponent implements OnInit {
   colunas:String[] = ['id','login','email']
   showDialog:boolean = false;
   token:any;
+  dataSource: MatTableDataSource<any[]>;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   constructor(
     private usuarioService:UsuarioService,
     private _snackBar: MatSnackBar,
@@ -32,6 +38,8 @@ export class UsuarioComponent implements OnInit {
     this.usuarioService.listarUsuarios(token).subscribe(
       (res)=>{
         this.listaUsuarios = res;
+        this.dataSource = new MatTableDataSource(this.listaUsuarios);
+        this.dataSource.paginator = this.paginator;
        
         console.log(this.listaUsuarios)
       },

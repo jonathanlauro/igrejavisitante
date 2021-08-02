@@ -1,7 +1,10 @@
 <h1 class="mt-5">Lista de Visitantes</h1>
 <hr>
 
-<table mat-table [dataSource]="listaVisitantes" class="some-tabela-desktop mat-elevation-z8">
+
+
+
+<table mat-table [dataSource]="dataSource" class="some-tabela-desktop mat-elevation-z8">
 
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -39,7 +42,7 @@
 
   
 
-  <table mat-table [dataSource]="listaVisitantes" class="some-tabela-mobile mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="some-tabela-mobile mat-elevation-z8">
 
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>
@@ -74,3 +77,5 @@
     <tr mat-header-row *matHeaderRowDef="colunas2"></tr>
     <tr mat-row *matRowDef="let row; columns: colunas2;"></tr>
   </table> 
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>

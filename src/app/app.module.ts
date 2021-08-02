@@ -30,6 +30,7 @@ import { AusenciaComponent } from './ausencia/ausencia.component';
 import { LembreteComponent } from './lembrete/lembrete.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatDialogModule,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
