@@ -6,6 +6,7 @@ import { AuthGuard } from './account/shared/auth.guard';
 import { AgradecimentoComponent } from './agradecimento/agradecimento.component';
 import { AusenciaComponent } from './ausencia/ausencia.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
+import { KidsComponent } from './kids/kids.component';
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 import { HomeComponent } from './layout/home/home.component';
 import { LembreteComponent } from './lembrete/lembrete.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: 'visitante',component: VisitanteComponent},
       { path: 'agradecimento',component: AgradecimentoComponent},
       { path: 'ausencia',component: AusenciaComponent},
-      { path: 'lembrete',component: LembreteComponent}
+      { path: 'lembrete',component: LembreteComponent},
+      { path: "reino-e-nosso", component: KidsComponent}
     ],
     canActivate:[AuthGuard]
   },

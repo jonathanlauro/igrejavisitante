@@ -31,6 +31,7 @@ import { LembreteComponent } from './lembrete/lembrete.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { KidsComponent } from './kids/kids.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     CadastroComponent,
     CadastroVisitanteComponent,
     AusenciaComponent,
-    LembreteComponent
+    LembreteComponent,
+    KidsComponent
   ],
   imports: [
     BrowserModule,

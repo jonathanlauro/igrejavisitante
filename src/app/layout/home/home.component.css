@@ -20,3 +20,24 @@
 .meio{
     height: 70rem;
 }
+.plus{
+    display: flex;
+    align-items: inherit;
+    margin-right: 40px;
+}
+.plus_interno{
+    text-align: center; 
+    margin-right: 1200px;
+    color: rgb(192, 192, 19);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 28px;
+    height: 59px;
+    width: 125px;
+    padding: 7px;
+    transition: .3s all;
+}
+.plus_interno:hover{
+    color: yellow;
+}

@@ -1,0 +1,25 @@
+.paravideo{
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20%;
+}
+
+.video{
+    width: 90%;
+    height: 90%;
+}
+.titulo{
+    display: flex;
+    font-size: 4rem;
+    margin-left: 20%;
+    line-height: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    color: tomato;
+}
+.imagem{
+    position: absolute fixed; 
+}
