@@ -23,3 +23,22 @@
 .imagem{
     position: absolute fixed; 
 }
+@media screen and (max-width: 768px){
+    .titulo{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .imagem{
+        height: 100px;
+        width: auto;
+    }
+    .video{
+        width: 100%;
+        height: 30%;
+    }
+    .paravideo{
+        height: 55%;
+        padding: none;
+        display: inherit;
+    }
+}
