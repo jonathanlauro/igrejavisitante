@@ -10,7 +10,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
+
   usuario:Usuario = {
     login : "",
     password : ""
@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
   async onSubmit(){
     try{
       const result:any = await this.accountService.login(this.usuario);
-      console.log(`Login efetuado: ${result.token}`);
       this.openSnackBar("Bem-Vindo","",true)
       //navego para a rota vazia novamente
       this.router.navigate(['']);
@@ -38,7 +37,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  openSnackBar(message: string, action: string, isError:boolean) { 
+  openSnackBar(message: string, action: string, isError:boolean) {
     this._snackBar.open(message, action,{duration: 2000,panelClass: [isError ? 'snackbar-error' : 'snackbar-success']});
   }
 }

@@ -1,0 +1,36 @@
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fundo">
+      <div class="container-fluid">
+        <a class="navbar-brand"[routerLink]= "['/']">IDEF</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div *ngIf="tipoUsuario == 'ROLE_ADMIN'; then admin; else user" class="menu"></div>
+            <div class="d-flex sair">
+                <button mat-button class="btsair" matTooltip="Sair do app" color="accent"type="button" [routerLink]= "['/login']" ><mat-icon>exit_to_app</mat-icon></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+</header>
+
+<ng-template #admin>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li><a  [routerLink]= "['/usuarios']" >Usuários</a></li>
+    <li><a href="">Membros</a></li>
+    <li><a href="">Visitantes</a></li>
+    <li><a href="">Almoxarifado</a></li>
+    <li><a href="">Solicitações de chamados</a></li>
+  </ul>
+</ng-template>
+
+<ng-template #user>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li><a href="">Cadastro de Visitantes</a></li>
+    <li><a href="">Cadastro de Membros</a></li>
+    <li><a href="">Abrir chamado</a></li>
+  </ul>
+</ng-template>

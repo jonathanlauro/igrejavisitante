@@ -1,0 +1,48 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.fundo{
+  background-color: rgb(20, 14, 53)!important;
+}
+nav ul li{
+  display: inline-block;
+  margin-left: 2rem;
+  padding: .5rem;
+  border-radius: 5px;
+  transition: all .3s;
+}
+nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.788);
+}
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(42, 165, 114);
+  transition: all .3s;
+}
+nav ul li a:hover {
+  color: black;
+}
+@media (max-width: 900px){
+  nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  nav ul li:nth-child(1){
+    margin-top: 1rem;
+  }
+  nav ul li {
+    background-color: #3a4046;
+    width: 90%;
+    margin-left: 0;
+    margin-bottom: .5rem;
+    text-align: center;
+  }
+  .sair{
+    float: right;
+  }
+
+}
